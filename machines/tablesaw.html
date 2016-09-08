@@ -1,1 +1,388 @@
+<!DOCTYPE html>
+<html>
 
+  {% include head.html %}
+
+  <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
+
+    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+
+      <header class="page-header">
+
+        <!-- You can turn off the avatar in _config.yml by setting to false -->
+        {% if site.resume_avatar == 'true' %}
+        <img src="images/avatar.jpg" alt="my photo" class="avatar" itemprop="image">
+        {% endif %}
+
+        <!-- Your name is defined in the _config.yml file -->
+        <h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
+
+        <div class="title-bar">
+
+          <!-- Your title is also defined in the _config.yml file -->
+          <h2 class="header-title" itemprop="jobTitle">{{ site.resume_title }}</h2>
+
+          <!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
+          {% include icon-links.html %}
+        </div>
+
+        <div class="executive-summary" itemprop="description">
+          <p>I am a problem solver, teacher, educator, student, learner, creative thinker, reader, and more. </p>
+        </div>
+
+        {% if site.resume_looking_for_work == 'yes' %}
+        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button" itemprop="email">Contact me</a>
+        {% elsif site.resume_looking_for_work == 'no' %}
+        <a class="contact-button not-looking">I'm not looking for work right now.</a>
+        {% else %}
+        {% endif %}
+
+      </header>
+
+      {% if site.resume_section_education %}
+      <!-- begin Education -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Education</h2>
+        </header>
+
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/CollegeOrUniversity">
+          <h3 class="resume-item-title" itemprop="name">University of Virginia</h3>
+          <h4 class="resume-item-details" itemprop="description">Master of Education, Instructional Technology: Engineering Education </h4>
+          <!--<p class="resume-item-copy">If you had any meaningful roles at college, feel free to write about them here.</p>-->
+        </div>
+
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/CollegeOrUniversity">
+          <h3 class="resume-item-title" itemprop="name">Old Dominion University</h3>
+          <h4 class="resume-item-details" itemprop="description">Master of Education, Educational Leadership: Administration & Supervision </h4>
+          <!--<p class="resume-item-copy">If you had any meaningful roles at college, feel free to write about them here.</p>-->
+        </div>
+
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/CollegeOrUniversity">
+          <h3 class="resume-item-title" itemprop="name">The College of New Jersey</h3>
+          <h4 class="resume-item-details" itemprop="description">Bachelor of Science, Technology Education: Pre-Engineering Education </h4>
+          <!--<p class="resume-item-copy">If you had any meaningful roles at college, feel free to write about them here.</p>-->
+        </div>
+
+      </section>
+      <!-- end Education -->
+      {% endif %}
+
+      {% if site.resume_section_experience %}
+      <!-- begin Experience -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Experience</h2>
+        </header>
+
+        <!-- Duplicate these resume-item elements and edit accordingly for each job you want to add here
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">Springfield Nuclear Power Plant</h3>
+          <h4 class="resume-item-details" itemprop="description">Safety Inspector &bull; Nov, 1980 &mdash; Present</h4>
+          <p class="resume-item-copy">Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points:</p>
+          <ul class="resume-item-list">
+            <li>Ate lots of donuts</li>
+            <li>Fell asleep rarely</li>
+            <li>Left promptly at end of day (sometimes earlier)</li>
+          </ul>
+          <p class="resume-item-copy">If you're going to copy paste markup, or edit it, just be sure to keep the appropriate classnames on your new elements for styling purposes.</p>
+
+        </div> end of resume-item -->
+
+        <!-- another resume item -->
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">Monticello High School</h3>
+          <h4 class="resume-item-details" itemprop="description">Engineering, CTE, & Computer Science Teacher &bull; 08/2015 &mdash; Present</h4>
+          <p class="resume-item-copy">Computer Science and Engineering teacher for grades 9-12, FIRST Robotics FTC Coach, Makerspace manager, school technology committee, successful collaboration projects with math, English, drama, and art, district curriculum development for all career and technical education classes in secondary education.</p>
+
+        </div><!-- end of resume-item -->
+
+        <!-- another resume item -->
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">Sutherland Middle School</h3>
+          <h4 class="resume-item-details" itemprop="description">Engineering & Technology Teacher &bull; 08/2013 &mdash; 07/2015</h4>
+          <p class="resume-item-copy">Technology and Engineering teacher for grades 6-8, district middle school curriculum development, county advanced manufacturing technology professional development and repair lead, programming club, advanced mechatronics program, Smithsonian Institute School, Vice President VTEEA, planning SWEDU/VTEEA Conference.</p>
+
+        </div><!-- end of resume-item -->
+        
+                <!-- another resume item -->
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">Univeristy of Virginia</h3>
+          <h4 class="resume-item-details" itemprop="description">Graduate Lab Assitant &bull; 06/2012 &mdash; 07/2013</h4>
+          <p class="resume-item-copy">Lab manager for 3D printing education facility located within the School of Engineering, co-taught undergraduate classes in computer-aided design, electronics, and 3D printing techniques to be utilized in math and science classrooms, developed lessons and guides for teachers using engineering as a catalyst to learn science.</p>
+
+        </div><!-- end of resume-item -->
+        
+                <!-- another resume item -->
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">South Hunterdon Regional High School</h3>
+          <h4 class="resume-item-details" itemprop="description">Technology & CTE Teacher &bull; 08/2009 &mdash; 06/2011</h4>
+          <p class="resume-item-copy">Teacher of computer-aided design, robotics, web design, and wood processing, FIRST Robotics FRC lead coach, converted computer lab into manufacturing and processing lab, wrote entire high school curriculum for district, various activities and events, taught 8th grade introduction to technology and systems.</p>
+
+        </div><!-- end of resume-item -->
+
+      </section>
+      <!-- end Experience -->
+      {% endif %}
+
+      {% if site.resume_section_projects %}
+      <!-- begin Projects -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Projects</h2>
+        </header>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title"><a href="http://donutlocator.io">donutfinder.io</a></h3>
+          <h4 class="resume-item-details">Founder & Primary Developer &bull; 2012 &mdash; Present</h4>
+          <p class="resume-item-copy">Donut Locator is an open source node/ember app that lets users find donuts within a defined radius from their home.</p>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">Springfield Donut Eater's User Group</h3>
+          <h4 class="resume-item-details">Co-Founder & Organizer &bull; 2007 &mdash; Present</h4>
+          <p class="resume-item-copy">DEUG is a local monthly meetup in Springfield where we share all the latest tips and tricks for dat donut lifestyle. I organize the group, and typically eat most of the donuts.</p>
+        </div>
+
+      </section>
+      <!-- end Projects -->
+      {% endif %}
+
+      {% if site.resume_section_skills %}
+      <!-- begin Skills -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Skills</h2>
+        </header>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details">Computer</h4>
+          <p class="resume-item-copy">C, CSS, HTML, Java, JavaScript, Processing (Linux, Windows, Mac)</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details">Graphics & CAD</h4>
+          <p class="resume-item-copy">Autodesk AutoCAD, Autodesk Inventor/Fusion 360, FreeCAD, GIMP, Illustrator, Inkscape, KiCAD, LibreCAD, OpenSCAD, Photoshop, Solidworks</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details">Areas</h4>
+          <p class="resume-item-copy">Woodworking, Metalworking, Welding, Electronics (Analog/Digital/Microcontrollers)</p>
+        </div>
+
+      </section>
+      <!-- end Skills -->
+      {% endif %}
+
+      {% if site.resume_section_recognition %}
+      <!-- begin Recognition -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Research & Conferences</h2>
+        </header>
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Cracking the Code: K-12 Coding & Programming</h4>
+          <p class="resume-item-copy">Math Science Innovation Center: K-12 Educator Conference &bull; 06/2016 &bull; Richmond, VA</p>
+        </div>
+        
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Edutopia: Making in the Classroom</h4>
+          <p class="resume-item-copy">ASCD National Conference &bull; 04/2016 &bull; Atlanta, GA</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Technology and Engineering Design: Learning by Doing</h4>
+          <p class="resume-item-copy">ITEEA International Conference &bull; 03/2016 &bull; Washington, DC</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Enhancing School Through Advanced Manufacturing</h4>
+          <p class="resume-item-copy">ISTE National Conference &bull; 07/2015 &bull; Philadelphia, PA</p>
+        </div>
+        
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Celebrating Innovations in Career and Technical Education</h4>
+          <p class="resume-item-copy">The White House &bull; 06/2015 &bull; Washington, DC</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Advanced Manufacturing as a Driver of Cross-Curricular Change</h4>
+          <p class="resume-item-copy">National Maker Faire &bull; 06/2015 &bull; Washington, DC</p>
+        </div>
+        
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Leveraging CTE to Connect Core Content in Public Schools</h4>
+          <p class="resume-item-copy">ITEEA International Conference &bull; 03/2015 &bull; Milwaukee, WI</p>
+        </div>
+        
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Advanced Manufacturing as a Driver of Cross-Curricular Change</h4>
+          <p class="resume-item-copy">ACTE Vision National Conference &bull; 11/2014 &bull; Nashville, TN</p>
+        </div>        
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Bringing Advanced Manufacturing into Your District</h4>
+          <p class="resume-item-copy">VMI STEM Conference &bull; 10/2014 &bull; Lexington, VA</p>
+        </div>  
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Enhancing Science through Engineering and Advanced Manufacturing</h4>
+          <p class="resume-item-copy">VMI STEM Conference &bull; 10/2014 &bull; Lexington, VA</p>
+        </div>  
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Connecting CTE to Core Content Classes as a Hub of Learning</h4>
+          <p class="resume-item-copy">VACTE REGION II Conference &bull; 09/2014 &bull; Richmond, VA</p>
+        </div>  
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Making Matters in Education</h4>
+          <p class="resume-item-copy">World Maker Faire NYC &bull; 09/2014 &bull; Bronx, NY</p>
+        </div> 
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Maker Ed Initiative</h4>
+          <p class="resume-item-copy">DC Mini Maker Faire &bull; 07/2014 &bull; Washington, DC</p>
+        </div> 
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Reconstructing Vail Telegraph with 3D Printing</h4>
+          <p class="resume-item-copy">ISTE National Conference &bull; 06/2014 &bull; Atlanta, GA</p>
+        </div> 
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">3D Printed Telegraph – Historical Representations</h4>
+          <p class="resume-item-copy">Smithsonian Institute &bull; 04/2014 &bull; Washington, DC</p>
+        </div> 
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Advanced Manufacturing in Schools</h4>
+          <p class="resume-item-copy">STEM Learning Summit (Longwood University) &bull; 01/2014 &bull; Farmville, VA</p>
+        </div> 
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">3D Printed Telegraph</h4>
+          <p class="resume-item-copy">Monticello &bull; 12/2013 &bull; Charlottesville, VA</p>
+        </div> 
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Enhancing Engineering Education and K12 Science Teaching Through Advanced Manufacturing Technologies</h4>
+          <p class="resume-item-copy">REM: World of Mechatronics &bull; 06/2013 &bull; Vienna, Austria</p>
+        </div> 
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Exploring Periodic Motion Through Advanced Manufacturing Technologies</h4>
+          <p class="resume-item-copy">ASEE: Tying STEM with Engineering &bull; 06/2013 &bull; Atlanta, GA</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">FabLab Classroom: Learning Middle School Science Through Engineering Design and Manufacturing</h4>
+          <p class="resume-item-copy"> NSF: Successful STEM Education Summit &bull; 05/2013 &bull; Baltimore, MD</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Enhancing Science Through Advanced Manufacturing</h4>
+          <p class="resume-item-copy">SITE (AACE) International Conference &bull; 03/2013 &bull; New Orleans, LA</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Mixed Reality Through Advanced Manufacturing</h4>
+          <p class="resume-item-copy">Curry (University of VA) Research Conference &bull; 03/2013 &bull; Charlottesville, VA</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">UVA Lab School Advanced Manufacturing</h4>
+          <p class="resume-item-copy">University of VA Technology Showcase &bull; 02/2013 &bull; Charlottesville, VA</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Mixed Reality in STEM Education</h4>
+          <p class="resume-item-copy">Learning & Leading with Technology &bull; 02/2013 &bull; ISTE</p>
+        </div>
+
+        <div class="resume-item">
+          <h4 class="resume-item-details" itemprop="award">Mixed Reality Demonstrations</h4>
+          <p class="resume-item-copy">NTLS Leadership Summit &bull; 09/2012 &bull; Washington, DC</p>
+        </div>
+
+      </section>
+      <!-- end Recognition -->
+      {% endif %}
+
+      {% if site.resume_section_associations %}
+      <!-- begin Associations -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Associations</h2>
+        </header>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title"><a href="http://beerfortheworld.com">Beer for the World</a></h3>
+          <h4 class="resume-item-details">Volunteer &bull; 2008 &mdash; Present</h4>
+          <p class="resume-item-copy">Organized fund drives and participated in fundraising events for the benefit of families in third world countries without proper access to malt beverages.</p>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">Springfield Nuclear Workers Labor Union</h3>
+          <h4 class="resume-item-details">Member in Good Standin &bull; 1994 &mdash; Present</h4>
+          <p class="resume-item-copy">Founding member of the local nuclear workers labor union.</p>
+        </div>
+
+      </section>
+      <!-- end Associations -->
+      {% endif %}
+
+      {% if site.resume_section_links %}
+      <!-- begin Links -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Additional Links</h2>
+        </header>
+
+        <div class="resume-item">
+          <ul class="resume-item-list">
+            <li><a href="http://www.cvilletomorrow.org/news/article/24305-county-students-get-new-lease-on-school-with/" target="_blank">Cville Tomorrow - County students get new lease on school with summer entrepreneurship program</a></li>
+            <li><a href="http://www.dailyprogress.com/gallery/independent-learning-summer-program-at-albemarle-high-school/collection_684873fe-3ede-11e6-a438-771bac81faff.html" target="_blank">Daily Progress - Independent learning summer program at Albemarle High School</a></li>
+            <li><a href="http://www.nbc29.com/story/32344886/students-create-new-inventions-at-albemarle-high-school" target="_blank">NBC 29 - Students Create New Inventions at Albemarle High School</a></li>
+            <li><a href="http://eepurl.com/b6HOVD" target="_blank">UVa Research Park - June 2016 Newsletter</a></li>
+            <li><a href="http://www.dailyprogress.com/news/local/charlottesville-business-innovation-council-gives-out-annual-awards/article_2f8d0dfc-23ab-11e6-897c-7ba04de0741c.html" target="_blank">Daily Progress - Charlottesville Business Innovation Council Gives Out Annual Awards</a></li>
+            <li><a href="http://www.nbc29.com/story/31811746/albemarle-county-schools-compete-to-win-10-million-grant" target="_blank">NBC 29 - Albemarle County Schools Compete to Win $10 Million Grant</li>
+            <li><a href="http://www.forbes.com/sites/darden/2015/11/09/from-class-clown-to-ceo-how-entrepreneurship-education-benefits-k-12-students/#7f570d3e12bc" target="_blank">Forbes - From Class Clown to CEO: How Entrepreneurship Education Benefits K12 Students</a></li>
+            <li><a href="http://www.dailyprogress.com/news/local/albemarle-student-hopes-to-hit-home-run-with-pitching-invention/article_f846effc-25db-11e5-abfd-67822f923074.html" target="_blank">Daily Progress - Albemarle Student Hopes to Hit Home Run with Pitching Invention</a></li>
+            <li><a href="http://www.nbc29.com/story/29503550/albemarle-county-teens-invention-gains-national-attention" target="_blank">NBC 29 - Albemarle County Teen's Invention Gains National Attention</a></li>
+            <li><a href="http://www.newsplex.com/home/headlines/Local-Students-Device-Helping-Pitchers-312599741.html" target="_blank">CBS 19 - Local Student's Device Helping Pitchers</a></li>
+            <li><a href="http://curry.virginia.edu/articles/local-curry-alumni-educators-are-getting-in-on-the-maker-movement" target="_blank">UVa - Local Curry Alumni Educators Get In On the Maker Movement</a></li>
+            <li><a href="http://www.edutopia.org/practice/maker-education-reaching-all-learners" target="_blank">Edutopia - Maker Education: Reaching All Learners</a></li>
+            <li><a href="http://wmra.org/post/maker-curriculum-highlighted-albemarle-county-schools" target="_blank">WMRA - Maker Curriculum Highlighted in Albemarle County Schools</a></li>
+            <li><a href="http://wina.com/morning-news/chad-ratliff-and-eric-bredder/" target="_blank">WINA - Chad Ratliff & Eric Bredder</a></li>
+            <li><a href="http://makezine.com/2015/06/29/re-inventing-first-text-message-system/" target="_blank">MAKE - How Middle Schoolers Reinvented the First Text Message System</a></li>
+            <li><a href="http://www.cvilletomorrow.org/news/article/19415-making-connections-conference/" target="_blank">Cville Tomorrow - Albemarle Takes a Day to Collaborate</a></li>
+            <li><a href="http://www.cvilletomorrow.org/news/article/19928-eric-bredder/" target="_blank">Cville Tomorrow - Meet Eric Bredder</a></li>
+            <li><a href="http://www.scholastic.com/browse/article.jsp?id=3758299" target="_blank">Scholastic - Meet the Makers</a></li>
+            <li><a href="http://www.nbc29.com/story/23613853/albemarle-middle-school-offers-mechatronics-class" target="_blank">NBC 29 - Middle School Mechatronics</a></li>
+            
+          </ul>
+        </div>
+
+      </section>
+      <!-- end Links -->
+      {% endif %}
+
+      <footer class="page-footer">
+        <p class="footer-line">&copy; 2016 Eric Bredder</p>
+        <p class="footer-line">Forked from <a href="https://github.com/jglovier/resume-template" target="_blank">jglovier</a>.</p>
+      
+      </footer>
+
+    </div>
+
+  </body>
+
+</html>
