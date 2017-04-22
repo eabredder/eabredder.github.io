@@ -30,12 +30,12 @@
     <![endif]-->
     
     <!-- Full Calendar -->
-<link href='../fullcalendar.min.css' rel='stylesheet' />
-<link href='../fullcalendar.print.min.css' rel='stylesheet' media='print' />
-<script src='../lib/moment.min.js'></script>
-<script src='../lib/jquery.min.js'></script>
-<script src='../fullcalendar.min.js'></script>
-<script src='../gcal.min.js'></script>
+<link href='fullcalendar-3.3.1/fullcalendar.min.css' rel='stylesheet' />
+<link href='fullcalendar-3.3.1/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+<script src='fullcalendar-3.3.1/lib/moment.min.js'></script>
+<script src='fullcalendar-3.3.1/lib/jquery.min.js'></script>
+<script src='fullcalendar-3.3.1/fullcalendar.min.js'></script>
+<script src='fullcalendar-3.3.1/gcal.min.js'></script>
 <script>
 
 	$(document).ready(function() {
@@ -90,7 +90,7 @@
 	}
 
 	#calendar {
-		max-width: 900px;
+		max-width: 100%;
 		margin: 0 auto;
 	}
 
@@ -154,8 +154,9 @@
                         <strong>Charlottesville, VA</strong>
                     </p>
             </div>
-                    <iframe src="https://calendar.google.com/calendar/embed?src=v4a0f857493qggkprlhl5mf978%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+	<div id='loading'>loading...</div>
 
+	<div id='calendar'></div>
              <div class="clearfix"></div>
         </div>
     </div>
