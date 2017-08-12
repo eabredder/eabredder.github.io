@@ -29,7 +29,7 @@ resume_section_projects:        true
 resume_section_skills:          true
 resume_section_recognition:     true
 resume_section_links:           true
-# resume_section_associations:    true
+resume_section_associations:    true
 
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
@@ -39,7 +39,7 @@ resume_social_links:
   resume_github_url:            "https://github.com/eabredder"
   # resume_dribbble_url:          "https://dribbble.com/jag"
   # resume_facebook_url:          "insert Facebook URL here"
-  # resume_linkedin_url:          "https://www.linkedin.com/in/joelglovier"
+  resume_linkedin_url:          "https://www.linkedin.com/in/eric-bredder"
   resume_instagram_url:         "https://www.instagram.com/ebredder"
   resume_project_url:           "http://machineree.com"
   
