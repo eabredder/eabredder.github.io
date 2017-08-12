@@ -40,7 +40,6 @@ resume_social_links:
   # resume_dribbble_url:          "https://dribbble.com/jag"
   # resume_facebook_url:          "insert Facebook URL here"
   resume_linkedin_url:          "https://www.linkedin.com/in/eric-bredder-509b1b145/" 
-    attributes:                 target: '_blank'
   resume_instagram_url:         "https://www.instagram.com/ebredder"
   resume_project_url:           "http://machineree.com"
   
