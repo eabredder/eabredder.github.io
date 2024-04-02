@@ -34,14 +34,14 @@ resume_section_associations:    true
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
-  resume_website_url:           "http://ebredder.org"
-  resume_twitter_url:           "http://twitter.com/ebredder"
-  resume_github_url:            "https://github.com/eabredder"
+ # resume_website_url:           "http://ebredder.org"
+ # resume_twitter_url:           "http://twitter.com/ebredder"
+ # resume_github_url:            "https://github.com/eabredder"
   # resume_dribbble_url:          "https://dribbble.com/jag"
   # resume_facebook_url:          "insert Facebook URL here"
-  resume_linkedin_url:          "https://www.linkedin.com/in/ericbredder/" 
-  resume_instagram_url:         "https://www.instagram.com/ebredder"
-  resume_project_url:           "http://machineree.com"
+ # resume_linkedin_url:          "https://www.linkedin.com/in/ericbredder/" 
+ # resume_instagram_url:         "https://www.instagram.com/ebredder"
+ # resume_project_url:           "http://machineree.com"
   
 
 # Design settings
